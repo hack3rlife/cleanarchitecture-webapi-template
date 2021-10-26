@@ -22,5 +22,5 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'custom'
-    projects: 'CleanArchitecture.WebApi.csproj'
+    projects: '**/*CleanArchitecture.WebApi.csproj'
     custom: 'dotnet pack'
