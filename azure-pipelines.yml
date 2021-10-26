@@ -21,11 +21,11 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'pack'
-    packagesToPack: 'Template/**/*.csproj'
+    packagesToPack: 'Template/'
     versioningScheme: 'byPrereleaseNumber'
-    majorVersion: '1'
-    minorVersion: '0'
-    patchVersion: '0'
+    majorVersion: '$(Major)'
+    minorVersion: '$(Minor)'
+    patchVersion: '$(Patch)'
 - task: NuGetCommand@2
   inputs:
     command: 'push'
