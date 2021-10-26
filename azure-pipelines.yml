@@ -21,6 +21,9 @@ steps:
 
 - task: DotNetCoreCLI@2
   inputs:
-    command: 'custom'
-    projects: '**/*CleanArchitecture.WebApi.csproj'
-    custom: 'pack'
+    command: 'pack'
+    packagesToPack: '''**/*CleanArchitecture.WebApi.csproj'
+    versioningScheme: 'byPrereleaseNumber'
+    majorVersion: '1'
+    minorVersion: '0'
+    patchVersion: '0'
