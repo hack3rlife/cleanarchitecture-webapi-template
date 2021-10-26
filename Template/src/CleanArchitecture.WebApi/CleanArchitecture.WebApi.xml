@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CleanArchitecture.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:CleanArchitecture.WebApi.Controllers.CleanArchitectureController.Get">
+            <summary>
+            Welcome controller!
+            </summary>
+            <returns>A<see cref="T:System.String"/> with a welcome message</returns>
+        </member>
+    </members>
+</doc>
