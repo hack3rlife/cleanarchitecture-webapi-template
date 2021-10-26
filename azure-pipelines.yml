@@ -22,7 +22,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'pack'
-    packagesToPack: '''**/*CleanArchitecture.WebApi.csproj'
+    packagesToPack: '**/*CleanArchitecture.WebApi.csproj'
     versioningScheme: 'byPrereleaseNumber'
     majorVersion: '1'
     minorVersion: '0'
