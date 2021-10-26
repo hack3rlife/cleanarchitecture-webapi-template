@@ -23,4 +23,4 @@ steps:
   inputs:
     command: 'custom'
     projects: '**/*CleanArchitecture.WebApi.csproj'
-    custom: 'dotnet pack'
+    custom: 'pack'
