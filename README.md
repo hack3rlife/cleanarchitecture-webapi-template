@@ -1,5 +1,3 @@
-[[_TOC_]]
-
 # Clean Architecture Template 
 The following solution template can be used for creating ASP .NET Core WebAPI using Clean Architecture Design Pattern Principles.
 
@@ -8,7 +6,7 @@ The following solution template can be used for creating ASP .NET Core WebAPI us
 # Getting Started
 1. Install the latest [.NET 5 SDK](https://dotnet.microsoft.com/download/dotnet/5.0).
 2. Install [.Net Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet/3.1).
-3. Clone this repository in your computer in a local `<DIRECTORY>` (`e.g.: C:\Users\hector.espinosa\source\repos`)
+3. Clone this repository in your computer in a local `<DIRECTORY>` (`e.g.: C:\Users\hack3rlife\source\repos`)
 4. Install the template by running the following command: `dotnet new <DIRECTORY>` 
 5. Create a new directory (`e.g.: hack3rlife.cleanarchitecture`) and `cd` into it.
 6. Create a new solution by executing the following command `dotnet new CleanArchitectureNetCoreWebAPI`
