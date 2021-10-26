@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0</PackageVersion>
     <PackageId>CleanArchitecture.ASP.NETCore.WebAPI.Template</PackageId>
     <Title>Clean Architecture ASP .NET Core WebAPI Template</Title>
     <Authors>hack3rlife</Authors>
@@ -16,7 +16,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.vs\**" />
+    <Content Include="Template\**\*" Exclude="Template\**\bin\**;templates\**\obj\**;Template\**\.vs\**" />
     <Compile Remove="**\*" />
   </ItemGroup>
 
