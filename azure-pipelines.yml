@@ -23,9 +23,9 @@ steps:
     command: 'pack'
     packagesToPack: 'Template/CleanArchitecture.WebApi.sln'
     versioningScheme: 'byPrereleaseNumber'
-    majorVersion: '$(Major)'
-    minorVersion: '$(Minor)'
-    patchVersion: '$(Patch)'
+    majorVersion: '1'
+    minorVersion: '0'
+    patchVersion: '0'
 - task: NuGetCommand@2
   inputs:
     command: 'push'
