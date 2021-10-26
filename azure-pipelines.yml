@@ -18,7 +18,7 @@ steps:
     command: 'build'
     arguments: '--configuration $(buildConfiguration)'
   displayName: 'dotnet build /Template/CleanArchitecture.WebApi.sln $(buildConfiguration)'
-- task: NuGetCommand@2
+- task: DotNetCoreCLI@2
   inputs:
     command: 'pack'
     packagesToPack: 'Template/**/*.csproj'
@@ -26,9 +26,12 @@ steps:
     majorVersion: '1'
     minorVersion: '0'
     patchVersion: '0'
-- task: NuGetCommand@2
+- task: NuGetAuthenticate@0
+  inputs:
+    nuGetServiceConnections: 'Nuget'
+- task: DotNetCoreCLI@2
   inputs:
     command: 'push'
-    packagesToPush: '$(Build.ArtifactStagingDirectory)/**/*.nupkg;!$(Build.ArtifactStagingDirectory)/**/*.symbols.nupkg'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
     nuGetFeedType: 'external'
     publishFeedCredentials: 'Nuget'
