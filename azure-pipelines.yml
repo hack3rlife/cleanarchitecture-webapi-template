@@ -28,5 +28,8 @@ steps:
     majorVersion: '1'
     minorVersion: '0'
     patchVersion: '0'
-
-
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'NugetPackage'
+    publishLocation: 'Container'
