@@ -24,6 +24,7 @@ steps:
   inputs:
     command: 'pack'
     packagesToPack: '**/*CleanArchitecture.WebApi.csproj'
+    nobuild: true
     versioningScheme: 'byPrereleaseNumber'
     majorVersion: '1'
     minorVersion: '0'
