@@ -29,3 +29,9 @@ steps:
     nobuild: true
     versioningScheme: byEnvVar
     versionEnvVar: buildVersion
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'NugetPackage'
+    publishLocation: 'Container'
+
