@@ -11,8 +11,10 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  Major: '1'
-  Minor: '0'
+  major: 1
+  minor: 0
+  patch: $(Build.BuildID)
+  buildVersion: $(major).$(minor).$(patch)
 
 steps:
 - task: DotNetCoreCLI@2
@@ -25,9 +27,9 @@ steps:
     command: 'pack'
     packagesToPack: 'CleanArchitecture.WebApi.csproj'
     versioningScheme: 'byPrereleaseNumber'
-    majorVersion: '1'
-    minorVersion: '0'
-    patchVersion: '0'
+    majorVersion: '$(major)'
+    minorVersion: '$(minor)'
+    patchVersion: '$(patch)'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
