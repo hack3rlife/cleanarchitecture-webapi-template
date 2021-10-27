@@ -29,9 +29,11 @@ steps:
     nobuild: true
     versioningScheme: byEnvVar
     versionEnvVar: buildVersion
-- task: PublishBuildArtifacts@1
+- task: DotNetCoreCLI@2
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'NugetPackage'
-    publishLocation: 'Container'
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: '5738c227-0a93-4d40-a365-b9930ee182cb'
+
 
