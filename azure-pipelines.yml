@@ -28,5 +28,5 @@ steps:
     versioningScheme: byPrereleaseNumber
     majorVersion: '$(Major)'
     minorVersion: '$(Minor)'
-    patchVersion: '$(rev:.r)'
+    patchVersion: '$(date:yyyyMMdd)'
 
