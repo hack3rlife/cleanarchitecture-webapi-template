@@ -11,6 +11,8 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
+  Major: '1'
+  Minor: '0'
 
 steps:
 - task: DotNetCoreCLI@2
@@ -18,8 +20,10 @@ steps:
     command: 'build'
     arguments: '--configuration $(buildConfiguration)'
   displayName: 'dotnet build /Template/CleanArchitecture.WebApi.sln $(buildConfiguration)'
-- task: NuGetCommand@2
+- task: DotNetCoreCLI@2
   inputs:
-    command: pack
-    packagesToPack: 'CleanArchitecture.WebApi.csproj'
-    packDestination: '$(Build.ArtifactStagingDirectory)'
+    command: 'push'
+    packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
+    nuGetFeedType: 'internal'
+    publishVstsFeed: '5738c227-0a93-4d40-a365-b9930ee182cb'
+
