@@ -18,11 +18,8 @@ steps:
     command: 'build'
     arguments: '--configuration $(buildConfiguration)'
   displayName: 'dotnet build /Template/CleanArchitecture.WebApi.sln $(buildConfiguration)'
-- task: DotNetCoreCLI@2
+- task: NuGetCommand@2
   inputs:
-    command: 'pack'
-    packagesToPack: '**/*.csproj'
-    versioningScheme: 'byPrereleaseNumber'
-    majorVersion: '1'
-    minorVersion: '0'
-    patchVersion: '0'
+    command: pack
+    packagesToPack: 'CleanArchitecture.WebApi.csproj'
+    packDestination: '$(Build.ArtifactStagingDirectory)'
