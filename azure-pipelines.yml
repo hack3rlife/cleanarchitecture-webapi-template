@@ -22,6 +22,14 @@ steps:
   displayName: 'dotnet build /Template/CleanArchitecture.WebApi.sln $(buildConfiguration)'
 - task: DotNetCoreCLI@2
   inputs:
+    command: 'pack'
+    packagesToPack: '**/*CleanArchitecture.WebApi.csproj'
+    versioningScheme: 'byPrereleaseNumber'
+    majorVersion: '1'
+    minorVersion: '0'
+    patchVersion: '0'
+- task: DotNetCoreCLI@2
+  inputs:
     command: 'push'
     packagesToPush: '$(Build.ArtifactStagingDirectory)/*.nupkg'
     nuGetFeedType: 'internal'
