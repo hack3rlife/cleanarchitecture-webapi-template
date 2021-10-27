@@ -11,8 +11,9 @@ pool:
 
 variables:
   buildConfiguration: 'Release'
-  Major: '1'
-  Minor: '0'
+  Major: 1
+  Minor: 0
+  Patch: $(Build.BuildID)
 
 steps:
 - task: DotNetCoreCLI@2
@@ -28,5 +29,5 @@ steps:
     versioningScheme: byPrereleaseNumber
     majorVersion: '$(Major)'
     minorVersion: '$(Minor)'
-    patchVersion: '$(date:yyyyMMdd)'
+    patchVersion: '$(Patch)'
 
