@@ -28,6 +28,8 @@ steps:
     majorVersion: '1'
     minorVersion: '0'
     patchVersion: '0'
+- task: NuGetAuthenticate@0
+  displayName: 'NuGet Authenticate'
 - task: NuGetCommand@2
   inputs:
     command: 'push'
