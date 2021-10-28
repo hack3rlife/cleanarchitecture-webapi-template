@@ -22,16 +22,16 @@ steps:
     command: 'build'
     arguments: '--configuration $(buildConfiguration)'
   displayName: 'dotnet build /Template/CleanArchitecture.WebApi.sln $(buildConfiguration)'
-- task: NuGetCommand@2
+- task: DotNetCoreCLI@2
   inputs:
     command: 'pack'
     packagesToPack: 'CleanArchitecture.WebApi.csproj'
-    versioningScheme: byEnvVar
-    versionEnvVar: buildVersion
+    nobuild: true
+    versioningScheme: 'byEnvVar'
+    versionEnvVar: 'buildVersion'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'NugetPackage'
     publishLocation: 'Container'
-
 
