@@ -3,13 +3,15 @@
   <PropertyGroup>
     <PackageType>Template</PackageType>
     <PackageVersion>1.0</PackageVersion>
-    <PackageId>CleanArchitecture.ASP.NETCore.WebAPI.Template</PackageId>
+    <PackageId>CleanArchitecture.ASP.NETCore.WebAPI</PackageId>
     <Title>Clean Architecture ASP .NET Core WebAPI Template</Title>
     <Authors>hack3rlife</Authors>
     <Description>Clean Architecture Project Template for ASP .NET Core WebAPI Projects.</Description>
     <PackageTags>dotnet-new;templates</PackageTags>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-
+	<PackageProjectUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</RepositoryUrl>'
+	
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>

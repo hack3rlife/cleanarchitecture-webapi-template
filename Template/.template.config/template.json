@@ -1,6 +1,6 @@
 {
   "$schema": "http://json.schemastore.org/template",
-  "author": "Hector Espinosa",
+  "author": "hack3rlife",
   "classifications": [ "Web", "WebAPI" ],
   "identity": "CleanArchitecture.ASP.NETCore.WebAPI.Template",
   "name": "CleanArchitecture ASP .NET Core WebAPI Template",
