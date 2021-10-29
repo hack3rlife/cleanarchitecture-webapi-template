@@ -6,9 +6,6 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..</DockerfileContext>
     <StartupObject></StartupObject>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Authors>AUTHORS</Authors>
-    <Description>ASP .NET Core Web API project for PROJECT_NAME</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -27,6 +24,5 @@
     <ProjectReference Include="..\PROJECT_NAME.Application\PROJECT_NAME.Application.csproj" />
     <ProjectReference Include="..\PROJECT_NAME.Infrastructure\PROJECT_NAME.Infrastructure.csproj" />
   </ItemGroup>
-
 
 </Project>
