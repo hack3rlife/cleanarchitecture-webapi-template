@@ -9,10 +9,23 @@
     <Description>Clean Architecture Project Template for ASP .NET Core WebAPI Projects.</Description>
     <PackageTags>dotnet-new;templates</PackageTags>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageProjectUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</RepositoryUrl>
 
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <ContentTargetFolders>content</ContentTargetFolders>
+  </PropertyGroup>
+
+<PropertyGroup>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageOutputPath>./nupkg</PackageOutputPath>    
+
+    <Authors>hack3rlife</Authors>
+    <PackageTags>hack3rlife; clean-architecture;C#;WebAPI</PackageTags>
+    <PackageCopyright>hack3rlife</PackageCopyright>
+    <PackageProjectUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

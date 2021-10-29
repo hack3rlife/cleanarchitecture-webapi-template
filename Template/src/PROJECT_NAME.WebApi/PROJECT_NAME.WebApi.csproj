@@ -6,17 +6,13 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..</DockerfileContext>
     <StartupObject></StartupObject>
-    <IsPackable>true</IsPackable>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <Authors>hack3rlife</Authors>
-    <Description>Clean Architecture Template for ASP .NET Core WebApi Projects: A simple ASP .NET Core Web API project for Development and Testing</Description>
-    <PackageProjectUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</RepositoryUrl>
+    <Authors>AUTHORS</Authors>
+    <Description>ASP .NET Core Web API project for PROJECT_NAME</Description>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>CleanArchitecture.WebApi.xml</DocumentationFile>
+    <DocumentationFile>PROJECT_NAME.WebApi.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,8 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CleanArchitecture.Application\CleanArchitecture.Application.csproj" />
-    <ProjectReference Include="..\CleanArchitecture.Infrastructure\CleanArchitecture.Infrastructure.csproj" />
+    <ProjectReference Include="..\PROJECT_NAME.Application\PROJECT_NAME.Application.csproj" />
+    <ProjectReference Include="..\PROJECT_NAME.Infrastructure\PROJECT_NAME.Infrastructure.csproj" />
   </ItemGroup>
 
 
