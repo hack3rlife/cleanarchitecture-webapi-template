@@ -7,10 +7,7 @@
     <Title>Clean Architecture ASP .NET Core WebAPI Template</Title>
     <Authors>hack3rlife</Authors>
     <Description>Clean Architecture Project Template for ASP .NET Core WebAPI Projects.</Description>
-    <PackageTags>dotnet-new;templates</PackageTags>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-	<PackageProjectUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</RepositoryUrl>'
 	
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
@@ -22,14 +19,14 @@
     <PackageOutputPath>./nupkg</PackageOutputPath>    
 
     <Authors>hack3rlife</Authors>
-    <PackageTags>hack3rlife; clean-architecture;C#;WebAPI</PackageTags>
+    <PackageTags>dotnet-new;templates;hack3rlife;clean-architecture;c#;webapi;netcoreapp31</PackageTags>
     <PackageCopyright>hack3rlife</PackageCopyright>
     <PackageProjectUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</PackageProjectUrl>
     <RepositoryUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Template\**\*" Exclude="Template\**\bin\**;templates\**\obj\**;Template\**\.vs\**" />
+    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.vs\**" />
     <Compile Remove="**\*" />
   </ItemGroup>
 
