@@ -15,6 +15,17 @@
     <ContentTargetFolders>content</ContentTargetFolders>
   </PropertyGroup>
 
+<PropertyGroup>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageOutputPath>./nupkg</PackageOutputPath>    
+
+    <Authors>hack3rlife</Authors>
+    <PackageTags>hack3rlife; clean-architecture;C#;WebAPI</PackageTags>
+    <PackageCopyright>hack3rlife</PackageCopyright>
+    <PackageProjectUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</RepositoryUrl>
+  </PropertyGroup>
+
   <ItemGroup>
     <Content Include="Template\**\*" Exclude="Template\**\bin\**;templates\**\obj\**;Template\**\.vs\**" />
     <Compile Remove="**\*" />

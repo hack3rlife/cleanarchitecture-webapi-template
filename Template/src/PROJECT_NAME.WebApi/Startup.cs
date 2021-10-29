@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using CleanArchitecture.Application;
-using CleanArchitecture.Infrastructure;
+using PROJECT_NAME.Application;
+using PROJECT_NAME.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
-namespace CleanArchitecture.WebApi
+namespace PROJECT_NAME.WebApi
 {
     public class Startup
     {

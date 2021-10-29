@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>CleanArchitecture.WebApi</name>
+        <name>PROJECT_NAME.WebApi</name>
     </assembly>
     <members>
-        <member name="M:CleanArchitecture.WebApi.Controllers.CleanArchitectureController.Get">
+        <member name="M:PROJECT_NAME.WebApi.Controllers.CleanArchitectureController.Get">
             <summary>
             Welcome controller!
             </summary>

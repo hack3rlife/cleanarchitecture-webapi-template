@@ -4,5 +4,6 @@
   "classifications": [ "Web", "WebAPI" ],
   "identity": "CleanArchitecture.ASP.NETCore.WebAPI.Template",
   "name": "CleanArchitecture ASP .NET Core WebAPI Template",
-  "shortName": "CleanArchitectureNetCoreWebAPI"
+  "shortName": "CleanArchitectureNetCoreWebAPI",
+  "sourceName": "PROJECT_NAME"
 }
