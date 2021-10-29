@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace CleanArchitecture.WebApi.Controllers
+namespace PROJECT_NAME.WebApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -24,7 +24,7 @@ namespace CleanArchitecture.WebApi.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public OkObjectResult Get()
         {
-            return Ok($"Welcome to the Clean Architecture Template");
+            return Ok("Welcome to the Clean Architecture Template");
         }
     }
 }
