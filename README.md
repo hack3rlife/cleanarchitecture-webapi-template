@@ -1,5 +1,5 @@
 # Clean Architecture Template 
-The following solution template can be used for creating ASP .NET Core WebAPI using Clean Architecture Design Pattern Principles.
+The following solution template can be used for creating C# ASP .NET Core WebAPI using Clean Architecture Design Pattern Principles.
 
 ![Index](img/index.png)
 
