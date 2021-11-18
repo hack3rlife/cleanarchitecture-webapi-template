@@ -4,11 +4,35 @@
         <name>PROJECT_NAME.WebApi</name>
     </assembly>
     <members>
+        <member name="T:PROJECT_NAME.WebApi.Controllers.CleanArchitectureController">
+            <summary>
+            Sample controller for Clean Architecture
+            </summary>
+        </member>
+        <member name="M:PROJECT_NAME.WebApi.Controllers.CleanArchitectureController.#ctor(Microsoft.Extensions.Logging.ILogger{PROJECT_NAME.WebApi.Controllers.CleanArchitectureController},PROJECT_NAME.Domain.Interfaces.IStatusService)">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+            <param name="statusService"></param>
+        </member>
         <member name="M:PROJECT_NAME.WebApi.Controllers.CleanArchitectureController.Get">
             <summary>
-            Welcome controller!
+            Sample HTTP GET.  
             </summary>
-            <returns>A<see cref="T:System.String"/> with a welcome message</returns>
+            <returns>The service <see cref="T:PROJECT_NAME.Domain.Entities.Status"/></returns>
+        </member>
+        <member name="T:PROJECT_NAME.WebApi.Program">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PROJECT_NAME.WebApi.Program.Main(System.String[])">
+            <summary>
+            
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>
