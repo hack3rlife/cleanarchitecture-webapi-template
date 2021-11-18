@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PROJECT_NAME.Domain;
 using PROJECT_NAME.Domain.Entities;
 
 namespace PROJECT_NAME.Infrastructure
