@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.0</PackageVersion>
+    <PackageVersion>1.0.2</PackageVersion>
     <PackageId>CleanArchitecture.ASP.NETCore.WebAPI</PackageId>
     <Title>Clean Architecture ASP .NET Core WebAPI Template</Title>
     <Authors>hack3rlife</Authors>
@@ -23,11 +23,16 @@
     <PackageCopyright>hack3rlife</PackageCopyright>
     <PackageProjectUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</PackageProjectUrl>
     <RepositoryUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.vs\**" />
+    <Content Include="templates\**\*"  Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.vs\**" />
     <Compile Remove="**\*" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 </Project>
