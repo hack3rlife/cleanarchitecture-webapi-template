@@ -1,8 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PROJECT_NAME.Domain;
+using PROJECT_NAME.Domain.Entities;
 using PROJECT_NAME.Domain.Interfaces;
 using System.Threading.Tasks;
-using PROJECT_NAME.Domain.Entities;
 
 namespace PROJECT_NAME.Infrastructure.Repositories
 {

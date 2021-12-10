@@ -18,7 +18,13 @@ namespace PROJECT_NAME.Infrastructure
         {
             services.AddScoped<IStatusRepository, StatusRepository>();
 
-            services.AddDbContext<CleanArchitectureDbContext>(options => options.UseInMemoryDatabase(databaseName: "in-memory"));
+            services.AddDbContext<CleanArchitectureDbContext>(options =>
+            {
+                options.UseInMemoryDatabase(databaseName: "in-memory");
+                options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+                options.EnableSensitiveDataLogging();
+                options.EnableDetailedErrors();
+            });
 
             return services;
         }

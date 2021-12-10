@@ -6,9 +6,9 @@ namespace PROJECT_NAME.Domain.Interfaces
     public interface IStatusRepository
     {
         /// <summary>
-        /// 
+        /// Gets the service status
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The Service <see cref="Status"/></returns>
         Task<Status> GetStatusAsync();
     }
 }

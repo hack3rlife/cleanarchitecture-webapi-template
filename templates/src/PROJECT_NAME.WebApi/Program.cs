@@ -7,16 +7,8 @@ using PROJECT_NAME.Infrastructure;
 
 namespace PROJECT_NAME.WebApi
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public class Program
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="args"></param>
-        /// <returns></returns>
         public static async Task Main(string[] args)
         {
             var host = CreateHostBuilder(args).Build();
