@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using PROJECT_NAME.Domain.Interfaces;
+using PROJECT_NAME.Application.Entities;
+using System.Reflection;
+using IStatusService = PROJECT_NAME.Application.Interfaces.IStatusService;
 
 namespace PROJECT_NAME.Application
 {
@@ -14,6 +16,9 @@ namespace PROJECT_NAME.Application
         /// <returns>A <see cref="IServiceCollection"/></returns>
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
         {
+            // Automapper
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
             services.AddScoped<IStatusService, StatusService>();
 
             return services;

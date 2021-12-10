@@ -9,30 +9,18 @@
             Sample controller for Clean Architecture
             </summary>
         </member>
-        <member name="M:PROJECT_NAME.WebApi.Controllers.CleanArchitectureController.#ctor(Microsoft.Extensions.Logging.ILogger{PROJECT_NAME.WebApi.Controllers.CleanArchitectureController},PROJECT_NAME.Domain.Interfaces.IStatusService)">
+        <member name="M:PROJECT_NAME.WebApi.Controllers.CleanArchitectureController.#ctor(Microsoft.Extensions.Logging.ILogger{PROJECT_NAME.WebApi.Controllers.CleanArchitectureController},PROJECT_NAME.Application.Interfaces.IStatusService)">
             <summary>
-            
+            This constructor initializes a new CleanArchitectureController using a <paramref name="logger"/> and <paramref name="statusService"/>
             </summary>
-            <param name="logger"></param>
-            <param name="statusService"></param>
+            <param name="logger">The <see cref="T:Microsoft.Extensions.Logging.ILogger"/> instance</param>
+            <param name="statusService">The <see cref="T:PROJECT_NAME.Application.Interfaces.IStatusService"/> instance</param>
         </member>
         <member name="M:PROJECT_NAME.WebApi.Controllers.CleanArchitectureController.Get">
             <summary>
-            Sample HTTP GET.  
+            Get the status of the service
             </summary>
-            <returns>The service <see cref="T:PROJECT_NAME.Domain.Entities.Status"/></returns>
-        </member>
-        <member name="T:PROJECT_NAME.WebApi.Program">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:PROJECT_NAME.WebApi.Program.Main(System.String[])">
-            <summary>
-            
-            </summary>
-            <param name="args"></param>
-            <returns></returns>
+            <returns>The service <see cref="T:PROJECT_NAME.Application.Dtos.StatusResponse"/></returns>
         </member>
     </members>
 </doc>
