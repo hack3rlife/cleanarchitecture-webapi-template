@@ -35,3 +35,9 @@ steps:
     ArtifactName: 'NugetPackage'
     publishLocation: 'Container'
 
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: false
+    projects: '**/*.csproj'
+
