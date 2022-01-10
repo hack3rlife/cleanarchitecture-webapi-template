@@ -4,19 +4,19 @@
         <name>PROJECT_NAME.WebApi</name>
     </assembly>
     <members>
-        <member name="T:PROJECT_NAME.WebApi.Controllers.CleanArchitectureController">
+        <member name="T:PROJECT_NAME.WebApi.Controllers.StatusController">
             <summary>
             Sample controller for Clean Architecture
             </summary>
         </member>
-        <member name="M:PROJECT_NAME.WebApi.Controllers.CleanArchitectureController.#ctor(Microsoft.Extensions.Logging.ILogger{PROJECT_NAME.WebApi.Controllers.CleanArchitectureController},PROJECT_NAME.Application.Interfaces.IStatusService)">
+        <member name="M:PROJECT_NAME.WebApi.Controllers.StatusController.#ctor(Microsoft.Extensions.Logging.ILogger{PROJECT_NAME.WebApi.Controllers.StatusController},PROJECT_NAME.Application.Interfaces.IStatusService)">
             <summary>
             This constructor initializes a new CleanArchitectureController using a <paramref name="logger"/> and <paramref name="statusService"/>
             </summary>
             <param name="logger">The <see cref="T:Microsoft.Extensions.Logging.ILogger"/> instance</param>
             <param name="statusService">The <see cref="T:PROJECT_NAME.Application.Interfaces.IStatusService"/> instance</param>
         </member>
-        <member name="M:PROJECT_NAME.WebApi.Controllers.CleanArchitectureController.Get">
+        <member name="M:PROJECT_NAME.WebApi.Controllers.StatusController.Get">
             <summary>
             Get the status of the service
             </summary>
