@@ -12,17 +12,17 @@ namespace PROJECT_NAME.WebApi.Controllers
     /// </summary>
     [ApiController]
     [Route("[controller]")]
-    public class CleanArchitectureController : ControllerBase
+    public class StatusController : ControllerBase
     {
         private readonly IStatusService _statusService;
-        private readonly ILogger<CleanArchitectureController> _logger;
+        private readonly ILogger<StatusController> _logger;
 
         /// <summary>
         /// This constructor initializes a new CleanArchitectureController using a <paramref name="logger"/> and <paramref name="statusService"/>
         /// </summary>
         /// <param name="logger">The <see cref="ILogger"/> instance</param>
         /// <param name="statusService">The <see cref="IStatusService"/> instance</param>
-        public CleanArchitectureController(ILogger<CleanArchitectureController> logger, IStatusService statusService)
+        public StatusController(ILogger<StatusController> logger, IStatusService statusService)
         {
             _logger = logger;
             _statusService = statusService;
