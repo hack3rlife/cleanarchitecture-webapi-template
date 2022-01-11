@@ -1,9 +1,36 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "hack3rlife",
-  "classifications": [ "Web", "WebAPI" ],
+  "classifications": [ "Web", "Cloud" ],
   "identity": "CleanArchitecture.ASP.NETCore.WebAPI.Template",
   "name": "CleanArchitecture ASP .NET Core WebAPI Template",
   "shortName": "CleanArchitectureNetCoreWebAPI",
-  "sourceName": "PROJECT_NAME"
+  "description": "Clean Architecture Project Template for ASP .NET Core WebAPI Projects.",
+  "sourceName": "PROJECT_NAME",
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  },
+  "symbols": {
+    "AuthorName" :  {
+      "type": "parameter",
+      "defaultValue": "hack3rlife",
+      "description": "Author's Name",
+      "datatype": "text",
+      "replaces": "AuthorName"
+    },
+    "Framework": {
+      "type": "parameter",
+      "description": "The target framework for the project.",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "netcoreapp3.1",
+          "description": "Target netcoreapp3.1"
+        }
+      ],
+      "replaces": "netcoreapp3.1",
+      "defaultValue": "netcoreapp3.1"
+    }
+  }
 }
