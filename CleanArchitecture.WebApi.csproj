@@ -1,8 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    <PackageVersion>1.0.2</PackageVersion>
     <PackageId>CleanArchitecture.ASP.NETCore.WebAPI</PackageId>
     <Title>Clean Architecture ASP .NET Core WebAPI Template</Title>
     <Authors>hack3rlife</Authors>
@@ -11,7 +10,7 @@
 	
     <IncludeContentInPack>true</IncludeContentInPack>
     <IncludeBuildOutput>false</IncludeBuildOutput>
-    <ContentTargetFolders>content</ContentTargetFolders>
+    <ContentTargetFolders>Content</ContentTargetFolders>
   </PropertyGroup>
 
 <PropertyGroup>
@@ -20,6 +19,7 @@
 
     <Authors>hack3rlife</Authors>
     <PackageTags>dotnet-new;templates;hack3rlife;clean-architecture;c#;webapi;netcoreapp31</PackageTags>
+    <RepositoryType>git</RepositoryType>
     <PackageCopyright>hack3rlife</PackageCopyright>
     <PackageProjectUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</PackageProjectUrl>
     <RepositoryUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</RepositoryUrl>
