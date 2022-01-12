@@ -25,14 +25,20 @@
     <RepositoryUrl>https://github.com/hack3rlife/cleanarchitecture.template.webapi</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-  </PropertyGroup>
+	<PackageIcon>icon.png</PackageIcon>
+
+</PropertyGroup>
 
   <ItemGroup>
-    <Content Include="templates\**\*"  Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.vs\**" />
+    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;templates\**\.vs\**" />
     <Compile Remove="**\*" />
   </ItemGroup>
 
+	<ItemGroup>
+    <Content Include="img\icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
   <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath="\"/>
+    <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 </Project>

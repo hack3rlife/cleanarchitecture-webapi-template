@@ -7,6 +7,7 @@
   "shortName": "CleanArchitectureNetCoreWebAPI",
   "description": "Clean Architecture Project Template for ASP .NET Core WebAPI Projects.",
   "sourceName": "PROJECT_NAME",
+  "defaultName": "WebApi",
   "tags": {
     "language": "C#",
     "type": "solution"
