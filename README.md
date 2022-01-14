@@ -27,8 +27,8 @@ The following solution template can be used for creating C# ASP .NET Core WebAPI
 1. Create a new solution by executing the following command `dotnet new -i CleanArchitectureNetCoreWebAPI -n <PROJECT_NAME>`.
 
 ## NuGet Installation
-1. Execute `dotnet new -i CleanArchitecture.ASP.NETCore.WebAPI` to install the latest version.
-    1.  Execute `dotnet new -u CleanArchitecture.ASP.NETCore.WebAPI` to uninstall the template.
+1. Execute `dotnet new -i Hack3rlife.ASP.NETCore.WebAPI` to install the latest version.
+    1.  Execute `dotnet new -u Hack3rlife.ASP.NETCore.WebAPI` to uninstall the template.
 
 # How the code is organized
 The solution is organized in the following way
