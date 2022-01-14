@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "hack3rlife",
   "classifications": [ "Web", "Cloud" ],
-  "identity": "CleanArchitecture.ASP.NETCore.WebAPI.Template",
+  "identity": "Hack3rlife.NetCore.WebAPI.Template",
   "name": "CleanArchitecture ASP .NET Core WebAPI Template",
   "shortName": "CleanArchitectureNetCoreWebAPI",
   "description": "Clean Architecture Project Template for ASP .NET Core WebAPI Projects.",
