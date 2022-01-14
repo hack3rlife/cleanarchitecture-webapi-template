@@ -6,6 +6,8 @@
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>..\..</DockerfileContext>
     <StartupObject></StartupObject>
+    <SignAssembly>False</SignAssembly>
+    <PackageId>Hack3rlife.NetCore.WebAPI.Template</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -24,6 +26,12 @@
   <ItemGroup>
     <ProjectReference Include="..\PROJECT_NAME.Application\PROJECT_NAME.Application.csproj" />
     <ProjectReference Include="..\PROJECT_NAME.Infrastructure\PROJECT_NAME.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="PROJECT_NAME.WebApi.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
