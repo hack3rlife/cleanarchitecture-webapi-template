@@ -11,7 +11,7 @@
         </member>
         <member name="M:PROJECT_NAME.WebApi.Controllers.StatusController.#ctor(Microsoft.Extensions.Logging.ILogger{PROJECT_NAME.WebApi.Controllers.StatusController},PROJECT_NAME.Application.Interfaces.IStatusService)">
             <summary>
-            This constructor initializes a new CleanArchitectureController using a <paramref name="logger"/> and <paramref name="statusService"/>
+            This constructor initializes a new StatusController using a <paramref name="logger"/> and <paramref name="statusService"/>
             </summary>
             <param name="logger">The <see cref="T:Microsoft.Extensions.Logging.ILogger"/> instance</param>
             <param name="statusService">The <see cref="T:PROJECT_NAME.Application.Interfaces.IStatusService"/> instance</param>

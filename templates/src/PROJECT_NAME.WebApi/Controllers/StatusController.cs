@@ -18,7 +18,7 @@ namespace PROJECT_NAME.WebApi.Controllers
         private readonly ILogger<StatusController> _logger;
 
         /// <summary>
-        /// This constructor initializes a new CleanArchitectureController using a <paramref name="logger"/> and <paramref name="statusService"/>
+        /// This constructor initializes a new StatusController using a <paramref name="logger"/> and <paramref name="statusService"/>
         /// </summary>
         /// <param name="logger">The <see cref="ILogger"/> instance</param>
         /// <param name="statusService">The <see cref="IStatusService"/> instance</param>
