@@ -13,7 +13,7 @@ The following solution template can be used for creating C# ASP .NET Core WebAPI
 1. [xUnit](https://github.com/xunit/xunit)
 1. [Swashbuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)
 
-![Index](img/index.png)
+![Swagger Docs](img/index.png)
 
 # Getting Started
 1. Install [Visual Studio](https://visualstudio.microsoft.com/)
