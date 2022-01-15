@@ -90,8 +90,7 @@ namespace PROJECT_NAME.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseHttpsRedirection();
-
+            app.UseHttpsRedirection();
             app.UseRouting();
             app.UseAuthorization();
 
