@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  project_name.webapi:
+    image: hack3rlife
+    build:
+      context: .
+      dockerfile: src/PROJECT_NAME.WebApi/Dockerfile

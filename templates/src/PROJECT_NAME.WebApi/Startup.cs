@@ -91,7 +91,6 @@ namespace PROJECT_NAME.WebApi
             }
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
             app.UseAuthorization();
 
