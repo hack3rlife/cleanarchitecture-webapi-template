@@ -25,7 +25,7 @@ namespace PROJECT_NAME.WebApi
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
+        {            
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(c =>
             {
@@ -33,8 +33,8 @@ namespace PROJECT_NAME.WebApi
                     new OpenApiInfo
                     {
                         Title = "Clean Architecture Template for ASP .NET Core WebApi Projects",
-                        Description = "A simple ASP .NET Core Web API project for Development and Testing Training",
-                        Version = "v1",
+                        Description = "A simple ASP .NET Core Web API project for Development",
+                        Version = $"v1-{Assembly.GetEntryAssembly().GetName().Version.ToString()}",
                         Contact = new OpenApiContact
                         {
                             Name = "hack3rlife",
@@ -73,7 +73,7 @@ namespace PROJECT_NAME.WebApi
             // specifying the Swagger JSON endpoint.
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Clean Architecture Template V1");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Clean Architecture Template");
                 c.RoutePrefix = string.Empty;
                 c.ConfigObject.SupportedSubmitMethods = new List<SubmitMethod>()
                 {
