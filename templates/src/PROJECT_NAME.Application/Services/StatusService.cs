@@ -1,7 +1,8 @@
-﻿using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using PROJECT_NAME.Application.Dtos;
 using PROJECT_NAME.Domain.Interfaces;
+using System;
+using System.Threading.Tasks;
 using IStatusService = PROJECT_NAME.Application.Interfaces.IStatusService;
 
 namespace PROJECT_NAME.Application.Services
@@ -21,7 +22,20 @@ namespace PROJECT_NAME.Application.Services
         {
            var status = await _statusRepository.GetStatusAsync();
 
-           return _mapper.Map<StatusResponse>(status);
+           var statusResponse = _mapper.Map<StatusResponse>(status);
+
+            if(DateTime.TryParse(statusResponse.Started, out DateTime result))
+            {
+                var elapsedTime = DateTime.UtcNow - result;
+                statusResponse.ElapsedTime = elapsedTime.ToString();
+            }
+
+            return statusResponse;
+        }
+
+        public async Task SetStatusAsync()
+        {
+            await _statusRepository.UpsertStatusAsync();
         }
     }
 }

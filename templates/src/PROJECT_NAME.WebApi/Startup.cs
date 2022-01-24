@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerUI;
+using Microsoft.Extensions.Logging;
 
 namespace PROJECT_NAME.WebApi
 {
@@ -87,6 +88,23 @@ namespace PROJECT_NAME.WebApi
 
             if (env.IsDevelopment())
             {
+                using (var scope = app.ApplicationServices.CreateScope())
+                {
+                    var services = scope.ServiceProvider;
+                    try
+                    {
+                        var context = services.GetRequiredService<CleanArchitectureDbContext>();
+
+                        DbContextDataSeed.SeedSampleData(context);
+
+                    }
+                    catch (Exception exception)
+                    {
+                        var logger = services.GetRequiredService<ILogger<Program>>();
+                        logger.LogError(exception, "An error occurred while seeding status.");
+                    }
+                }
+
                 app.UseDeveloperExceptionPage();
             }
 

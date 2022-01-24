@@ -11,7 +11,7 @@ namespace PROJECT_NAME.WebApi.Controllers
     /// Sample controller for Clean Architecture
     /// </summary>
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class StatusController : ControllerBase
     {
         private readonly IStatusService _statusService;
