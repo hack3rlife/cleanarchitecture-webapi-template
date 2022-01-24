@@ -1,9 +1,6 @@
-using System;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using PROJECT_NAME.Infrastructure;
+using System.Threading.Tasks;
 
 namespace PROJECT_NAME.WebApi
 {
@@ -13,7 +10,7 @@ namespace PROJECT_NAME.WebApi
         {
             var host = CreateHostBuilder(args).Build();
 
-            using (var scope = host.Services.CreateScope())
+/*            using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
                 try
@@ -25,9 +22,11 @@ namespace PROJECT_NAME.WebApi
                 }
                 catch (Exception exception)
                 {
-                    Console.WriteLine(exception);
+                    var logger = services.GetRequiredService<ILogger<Program>>();
+                    logger.LogError(exception, "An error occurred while seeding status.");
                 }
             }
+*/
 
             await host.RunAsync();
         }
