@@ -1,7 +1,8 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using System.Reflection;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using PROJECT_NAME.Application.Entities;
 using System.Reflection;
+using PROJECT_NAME.Application.Services;
 using IStatusService = PROJECT_NAME.Application.Interfaces.IStatusService;
 
 namespace PROJECT_NAME.Application
