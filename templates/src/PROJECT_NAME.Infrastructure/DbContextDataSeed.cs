@@ -15,10 +15,11 @@ namespace PROJECT_NAME.Infrastructure
                 await context.Status.AddAsync(
                     new Status
                     {
-                        Started = DateTime.UtcNow,
+                        Started = DateTime.UtcNow.ToString("s"),
                         Server = Environment.MachineName,
                         OsVersion = Environment.OSVersion.ToString(),
                         AssemblyVersion = Assembly.GetEntryAssembly().GetName().Version.ToString(),
+                        ProcessorCount = Environment.ProcessorCount
                     });
 
                 await context.SaveChangesAsync();
@@ -32,10 +33,11 @@ namespace PROJECT_NAME.Infrastructure
                 context.Status.Add(
                     new Status
                     {
-                        Started = DateTime.UtcNow,
+                        Started = DateTime.UtcNow.ToString("s"),
                         Server = Environment.MachineName,
                         OsVersion = Environment.OSVersion.ToString(),
                         AssemblyVersion = Assembly.GetEntryAssembly().GetName().Version.ToString(),
+                        ProcessorCount = Environment.ProcessorCount
                     });
 
                 context.SaveChanges();

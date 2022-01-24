@@ -10,5 +10,12 @@ namespace PROJECT_NAME.Application.Interfaces
         /// </summary>
         /// <returns>The <see cref="StatusResponse"/></returns>
         Task<StatusResponse> GetStatusAsync();
+
+        /// <summary>
+        /// Inserts the Status when the Service Starts.
+        /// </summary>
+        /// <remarks>This is used internally.</remarks>
+        /// <returns></returns>
+        Task SetStatusAsync();
     }
 }
