@@ -1,10 +1,10 @@
-﻿using AutoMapper;
+﻿using System.Threading.Tasks;
+using AutoMapper;
 using PROJECT_NAME.Application.Dtos;
-using System.Threading.Tasks;
 using PROJECT_NAME.Domain.Interfaces;
 using IStatusService = PROJECT_NAME.Application.Interfaces.IStatusService;
 
-namespace PROJECT_NAME.Application.Entities
+namespace PROJECT_NAME.Application.Services
 {
     public class StatusService : IStatusService
     {
