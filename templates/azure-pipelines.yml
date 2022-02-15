@@ -1,0 +1,70 @@
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  buildConfiguration: 'Release'
+  major: 1
+  minor: 0
+  patch: $(Build.BuildID)
+  buildVersion: $(major).$(minor).$(patch)
+
+steps:
+- task: DotNetCoreCLI@2
+  displayName: Restore Packages
+  inputs:
+    command: 'restore'
+    projects: '**/*.csproj'
+- task: DotNetCoreCLI@2
+  displayName: Building Solution
+  inputs:
+    projects: '**/*.csproj'
+    arguments: '--configuration $(buildConfiguration) -p:Version=$(buildVersion)'
+
+- task: DotNetCoreCLI@2
+  displayName: Executing Unit Testing
+  inputs:
+    command: test
+    projects: '**/*UnitTest/*.csproj'
+    arguments: '--configuration $(buildConfiguration)'
+    publishTestResults: true
+
+- task: DotNetCoreCLI@2
+  displayName: Executing Integration Tests
+  inputs:
+    command: test
+    projects: '**/*IntegrationTests/*.csproj'
+    arguments: '--configuration $(buildConfiguration)'
+    publishTestResults: true    
+
+- task: DotNetCoreCLI@2
+  displayName: Executing End to End Tests
+  inputs:
+    command: test
+    projects: '**/*EndToEndTests/*.csproj'
+    arguments: '--configuration $(buildConfiguration)'
+    publishTestResults: true    
+
+- task: DotNetCoreCLI@2
+  displayName: 'Zip Artifact to $(Build.ArtifactStagingDirectory)'
+  inputs:
+    command: 'publish'
+    publishWebProjects: false
+    zipAfterPublish: true
+    projects: 'src/**/BlogWebApi.WebApi.csproj'
+    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory) -p:Version=$(buildVersion)'
+
+- task: PublishBuildArtifacts@1
+  displayName: Publish Artifact (.zip) to drop folder
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+  
