@@ -17,6 +17,12 @@ variables:
   buildVersion: $(major).$(minor).$(patch)
 
 steps:
+- task: UseDotNet@2
+  displayName: "Installing .NET Core 3.1.x"
+  inputs:
+    packageType: 'sdk'
+    version: '3.1.x'
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
